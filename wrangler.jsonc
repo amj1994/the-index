@@ -1,0 +1,9 @@
+{
+  // Deploy this repo to Cloudflare Workers (static assets):
+  //   CLOUDFLARE_ACCOUNT_ID=<id> CLOUDFLARE_API_TOKEN=<token> npx wrangler deploy
+  // The repo root IS the asset directory, so .assetsignore below keeps .git
+  // and friends from being served publicly. Without it, /.git/config is live.
+  "name": "the-index",
+  "compatibility_date": "2026-10-05",
+  "assets": { "directory": "." }
+}
