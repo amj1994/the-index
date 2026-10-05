@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Index — 71 Tools Every Web Designer Should Have Bookmarked</title>
+<meta name="description" content="A working index of the tools web designers and front-end builders actually reach for — Figma kits, type, photography, icons, colour, ops and where to find the work. Searchable, free, no sign-up.">
+<meta property="og:title" content="The Index — 71 tools for web designers">
+<meta property="og:description" content="Figma kits, type, photography, icons, colour, studio ops and where the work is. One searchable page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Flip --ink and --paper to invert the whole page to the cream theme. */
+  --paper:#141210;
+  --paper-2:#1B1815;
+  --ink:#F4F3EE;
+  --muted:#9C968C;
+  --terra:#D9764F;
+  --terra-deep:#C15F3C;
+  --rule:rgba(244,243,238,.10);
+  --rule-2:rgba(244,243,238,.18);
+
+  --z-base:1; --z-rail:10; --z-bar:20; --z-top:30;
+
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
+  --ease:cubic-bezier(.2,.8,.25,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--terra);color:#141210}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+@media(max-width:640px){.wrap{padding:0 20px}}
+
+/* ---------------------------------------------------------------- masthead */
+.masthead{padding:76px 0 0;position:relative}
+.brandline{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:38px;
+}
+.brandline b{color:var(--terra);font-weight:500}
+h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(46px,8vw,92px);line-height:.94;letter-spacing:-.025em;
+  text-wrap:balance;max-width:15ch;
+}
+h1 em{font-style:italic;color:var(--terra)}
+.standfirst{
+  margin-top:26px;max-width:62ch;color:#CFC9C0;
+  font-size:clamp(15.5px,1.7vw,18.5px);line-height:1.62;text-wrap:pretty;
+}
+.masthead-meta{
+  display:flex;gap:34px;flex-wrap:wrap;margin-top:34px;padding-bottom:40px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.masthead-meta span b{color:var(--ink);font-weight:500}
+
+/* ---------------------------------------------------------------- controls */
+.controls{
+  position:sticky;top:0;z-index:var(--z-bar);
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);
+  padding:14px 0;
+}
+.controls-inner{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.search{
+  display:flex;align-items:center;gap:11px;flex:1 1 300px;min-width:0;
+  background:var(--paper-2);border:1px solid var(--rule-2);border-radius:9px;
+  padding:0 14px;height:46px;transition:border-color .25s var(--ease);
+}
+.search:focus-within{border-color:var(--terra)}
+.search svg{flex:none;color:var(--muted)}
+.search input{
+  flex:1;min-width:0;background:none;border:0;outline:0;color:var(--ink);
+  font:inherit;font-size:15px;
+}
+.search input::placeholder{color:#8B857B}
+.kbd{
+  font-family:var(--mono);font-size:10.5px;color:var(--muted);
+  border:1px solid var(--rule-2);border-radius:4px;padding:3px 6px;flex:none;
+}
+@media(max-width:720px){.kbd{display:none}}
+.count{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);white-space:nowrap;
+}
+.count b{color:var(--terra);font-weight:500}
+
+.chips{display:flex;gap:7px;flex-wrap:wrap;padding:16px 0 0}
+.chip{
+  font:inherit;font-size:12.5px;color:#BDB7AD;cursor:pointer;
+  background:none;border:1px solid var(--rule-2);border-radius:999px;
+  padding:6px 13px;transition:all .22s var(--ease);white-space:nowrap;
+}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper);font-weight:500}
+
+/* ---------------------------------------------------------------- index */
+main{padding:8px 0 40px}
+.group{padding-top:58px;scroll-margin-top:96px}
+.group-head{
+  display:flex;align-items:baseline;gap:16px;
+  padding-bottom:14px;border-bottom:1px solid var(--rule-2);
+}
+.group-head h2{
+  font-family:var(--serif);font-weight:400;letter-spacing:-.015em;
+  font-size:clamp(27px,3.4vw,40px);line-height:1.05;
+}
+.group-head .n{
+  font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  letter-spacing:.1em;margin-left:auto;flex:none;
+}
+.group-note{color:var(--muted);font-size:14px;margin-top:12px;max-width:58ch}
+
+.row{
+  display:flex;align-items:baseline;gap:14px;
+  padding:15px 10px 15px 0;border-bottom:1px solid var(--rule);
+  position:relative;transition:background .2s var(--ease);
+}
+.row::before{
+  content:'';position:absolute;left:-10px;top:0;bottom:0;width:2px;
+  background:var(--terra);transform:scaleY(0);transform-origin:center;
+  transition:transform .28s var(--ease);
+}
+.row:hover{background:rgba(244,243,238,.028)}
+.row:hover::before{transform:scaleY(.55)}
+.row-name{
+  font-size:16.5px;font-weight:500;letter-spacing:-.011em;flex:none;
+  transition:color .2s var(--ease);
+}
+.row:hover .row-name{color:var(--terra)}
+.leader{
+  flex:1;min-width:18px;height:1px;align-self:center;
+  background-image:radial-gradient(circle,var(--rule-2) 1px,transparent 1px);
+  background-size:5px 1px;background-repeat:repeat-x;background-position:0 0;
+  opacity:.9;
+}
+.row-desc{
+  flex:0 1 46ch;color:#B0AAA0;font-size:14.2px;line-height:1.5;
+  text-align:right;
+}
+.row-host{
+  font-family:var(--mono);font-size:11px;color:#7E786E;
+  flex:none;white-space:nowrap;
+}
+.row-go{flex:none;color:var(--muted);transition:transform .25s var(--ease),color .2s}
+.row:hover .row-go{color:var(--terra);transform:translate(2px,-2px)}
+@media(max-width:900px){
+  .row{flex-wrap:wrap;gap:6px 12px;padding:14px 10px 14px 0}
+  .leader{display:none}
+  .row-desc{flex:1 1 100%;text-align:left;order:3}
+  .row-host{order:2;margin-left:auto}
+  .row-go{order:4;position:absolute;right:0;top:14px}
+}
+
+.empty{padding:80px 0;text-align:center;color:var(--muted)}
+.empty b{
+  display:block;font-family:var(--serif);font-size:30px;color:var(--ink);
+  margin-bottom:10px;font-weight:400;
+}
+.empty button{
+  margin-top:20px;font:inherit;font-size:13.5px;cursor:pointer;
+  background:var(--ink);color:var(--paper);border:0;border-radius:999px;
+  padding:10px 20px;font-weight:500;
+}
+
+/* ---------------------------------------------------------------- outro */
+.outro{
+  margin-top:80px;padding:56px 0 30px;border-top:1px solid var(--rule-2);
+}
+.outro h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,44px);
+  letter-spacing:-.02em;line-height:1.05;max-width:18ch;text-wrap:balance;
+}
+.outro p{margin-top:18px;max-width:58ch;color:#BDB7AD;line-height:1.62;text-wrap:pretty}
+.outro a.cta{
+  display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+  background:var(--terra-deep);color:#fff;border-radius:999px;
+  padding:13px 24px;font-size:14.5px;font-weight:500;
+  transition:background .25s var(--ease),transform .25s var(--ease);
+}
+.outro a.cta:hover{background:var(--terra);transform:translateY(-2px)}
+footer{
+  padding:34px 0 60px;color:#7E786E;font-size:12.5px;line-height:1.7;
+  border-top:1px solid var(--rule);margin-top:46px;
+}
+footer a{color:var(--terra);font-weight:500}
+
+/* ---------------------------------------------------------------- motion */
+.rise{opacity:0;transform:translateY(14px);animation:rise .7s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rise{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brandline rise" style="animation-delay:.05s">
+      <span>Web Studio</span><span>·</span><b>Free resource</b><span>·</span><span>Updated 2026</span>
+    </div>
+    <h1 class="rise" style="animation-delay:.12s">The tools, <em>without</em> the twenty open tabs.</h1>
+    <p class="standfirst rise" style="animation-delay:.2s">
+      Every designer ends up rebuilding the same bookmark folder. This is mine, written
+      out properly — the Figma kits worth installing, the type that won't get you a
+      licensing email, the photo libraries that don't look like stock, and the handful
+      of places freelance work actually comes from. Search it, take what you need,
+      close the tab.
+    </p>
+    <div class="masthead-meta rise" style="animation-delay:.28s">
+      <span><b id="m-total">71</b> resources</span>
+      <span><b>11</b> categories</span>
+      <span><b>0</b> sign-ups required</span>
+      <span><b>0</b> affiliate links</span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-inner">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search 71 resources — try “icons”, “free”, “fonts”…" autocomplete="off" aria-label="Search resources">
+        <span class="kbd">/</span>
+      </label>
+      <span class="count"><b id="c-n">71</b> showing</span>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  </div>
+</div>
+
+<main class="wrap" id="list"></main>
+
+<section class="outro wrap">
+  <h2>Bookmarks are where good intentions go to die.</h2>
+  <p>
+    Saving a tool isn't the same as knowing when to reach for it. Inside the community
+    we build with these every week — real pages, real clients, and the prompt library
+    that turns them into finished work. It's free to join, and this page is only the
+    beginning of what's in there.
+  </p>
+  <a class="cta" href="https://www.skool.com/ai-websites-2026" target="_blank" rel="noopener noreferrer">
+    Join AI Websites 2026
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+  </a>
+</section>
+
+<footer class="wrap">
+  Every link points straight at the tool's own site — no redirects, no referral tags, nothing
+  tracked. Tools change their pricing and free tiers constantly, so check the current terms on
+  their page before you commit to one. Names and trademarks belong to their respective owners.
+  <br><a href="https://www.skool.com/ai-websites-2026" target="_blank" rel="noopener noreferrer">skool.com/ai-websites-2026</a>
+</footer>
+
+<script>
+const CATS = [
+  ['tools','Design Tools',   'The three that actually matter. Everything else is a preference.'],
+  ['figma','Figma & Kits',   'Stop drawing components that already exist.'],
+  ['webflow','Webflow',      'Plugins, tutorials and cloneables for building without code.'],
+  ['type','Typography',      'Free, paid, and how to identify the one you just saw.'],
+  ['photo','Photography',    'Free libraries first, paid when the free ones look free.'],
+  ['icons','Icons & Illustration','Check the attribution terms before you ship a client site.'],
+  ['inspo','Inspiration',    'Finished, shipped websites — not dribbble mockups that never got built.'],
+  ['color','Colour',         'Generate a palette, steal one off a page, or check harmony.'],
+  ['ops','Productivity',     'Invoices, contracts, time and the admin nobody warned you about.'],
+  ['jobs','Finding Work',    'Where freelance web work is, and what to charge for it.'],
+  ['learn','Further Learning','The research and the two books worth reading twice.'],
+];
+
+const R = [
+  // ---- Design tools
+  ['Figma','https://www.figma.com/','Interface design, prototyping and real-time collaboration. Browser, Mac and Windows.','tools'],
+  ['Photoshop','https://www.adobe.com/products/photoshop.html','Still the reference for serious photo retouching. Subscription only.','tools'],
+  ['Affinity Photo','https://affinity.serif.com/en-gb/photo/','A one-off purchase alternative to Photoshop that does 90% of the job.','tools'],
+
+  // ---- Figma
+  ['Figma Community','https://www.figma.com/community','Templates, libraries, plugins and icon sets published by other designers.','figma'],
+  ['Made in Figma','https://madeinfigma.com/','A deep library of ready-made components, flows and UI sections.','figma'],
+  ['Figma Freebies','https://figmafreebie.com','Searchable database of free Figma files.','figma'],
+  ['Freebies UI','https://freebiesui.com','Free Figma and Sketch kits, updated regularly.','figma'],
+  ['UI Store Design','https://www.uistore.design/','Free files for Figma, Sketch and Webflow in one place.','figma'],
+  ['Sketch Repo','https://sketchrepo.com','Sketch files that import cleanly into Figma.','figma'],
+  ['Sketch App Sources','https://www.sketchappsources.com','Older but enormous Sketch archive — still useful for structure.','figma'],
+  ['Figma Plugins','https://www.figma.com/community/plugins','The plugin directory. A handful of these will save you hours a week.','figma'],
+  ['Content Reel','https://www.figma.com/c/plugin/731627216655469013','Drops realistic names, avatars and copy into your layouts instantly.','figma'],
+
+  // ---- Webflow
+  ['Webflow Tools','https://www.webflowtools.com/','A curated shelf of plugins, add-ons and custom-code snippets.','webflow'],
+  ['Boosters','https://webflow.com/apps/detail/boosters','Advanced interactions inside Webflow without writing the code yourself. Free.','webflow'],
+  ['Webflow Forum','https://forum.webflow.com/','Where the answer to your specific bug has usually already been posted.','webflow'],
+  ['Webflow University','https://university.webflow.com/videos','The official video course. Genuinely one of the best free curricula online.','webflow'],
+  ['11 Time-Saving Tips','https://webflow.com/blog/11-time-saving-pro-tips-for-web-designers-working-in-webflow','Short read that will change how fast you work in the Designer.','webflow'],
+  ['Flowbase','https://www.flowbase.co/','Cloneable Webflow components, templates and walkthroughs.','webflow'],
+
+  // ---- Type
+  ['Google Fonts','https://fonts.google.com/','Free for commercial use, no licence to read, already inside Figma.','type'],
+  ['Adobe Fonts','https://fonts.adobe.com/','Thousands of premium families included with a Creative Cloud plan.','type'],
+  ['MyFonts','https://www.myfonts.com','Where you go to actually buy the licence for a commercial typeface.','type'],
+  ['Fonts Ninja','https://www.fonts.ninja','Browser extension that names any font on any page, and its price.','type'],
+  ['Typespiration','https://typespiration.com','Pre-tested font pairings you can lift straight into a layout.','type'],
+
+  // ---- Photos
+  ['Unsplash','https://unsplash.com/','Free photography that doesn\'t look like stock photography.','photo'],
+  ['Pexels','https://www.pexels.com/','Same idea as Unsplash, different library. Search both.','photo'],
+  ['Moose by Icons8','https://photos.icons8.com/','Cut-out people and objects. Free for personal use; check terms for client work.','photo'],
+  ['iStock','https://www.istockphoto.com/','Premium paid library. Expensive, but the range is unmatched.','photo'],
+  ['Bigstock','https://bigstockphoto.com','The budget end of paid stock. Fine for secondary imagery.','photo'],
+  ['Shutterstock','https://www.shutterstock.com/','Sits between the two on price and quality.','photo'],
+  ['Burst by Shopify','https://burst.shopify.com/','Free photos aimed at ecommerce — product, lifestyle, retail.','photo'],
+  ['remove.bg','https://www.remove.bg','Strips a background in about two seconds. Uncannily good.','photo'],
+  ['Image Compressor','https://imagecompressor.com','Shrink files before upload. The cheapest performance win there is.','photo'],
+  ['Imageye','https://chromewebstore.google.com/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm','Chrome extension that lists every image on a page for download.','photo'],
+
+  // ---- Icons
+  ['Flaticon','https://www.flaticon.com/','Vast icon database. The free tier requires attribution — read it.','icons'],
+  ['Material Symbols','https://fonts.google.com/icons','Google\'s open-source set. Free for anything, no attribution.','icons'],
+  ['iconmonstr','https://iconmonstr.com','Clean icons, free for commercial work, no attribution required.','icons'],
+  ['Hugeicons','https://hugeicons.com','40,000+ icons across nine styles — useful when you need one family.','icons'],
+  ['Nucleo','https://nucleoapp.com/','A desktop app for collecting, editing and organising your icons.','icons'],
+  ['Streamline','https://streamlineicons.com/','30,000 vectors with a searchable companion app.','icons'],
+  ['Symbolicons','https://symbolicons.com/','One coherent family in four weights — good when consistency matters.','icons'],
+  ['Ouch by Icons8','https://icons8.com/illustrations','Vector illustrations, free and paid, in a lot of distinct styles.','icons'],
+  ['Storyset','https://storyset.com','Editable illustrations you can recolour to a brand before exporting.','icons'],
+  ['Craftwork','https://craftwork.design/','Illustration packs with more character than the usual corporate blobs.','icons'],
+  ['unDraw','https://undraw.co/illustrations','Open SVGs where you set the accent colour before you download.','icons'],
+  ['Humaaans','https://www.humaaans.com/','Mix-and-match people you can pose and dress yourself.','icons'],
+  ['Freepik','https://www.freepik.com/','Enormous graphics archive. Check the licence on every single file.','icons'],
+
+  // ---- Inspiration
+  ['Dribbble','https://dribbble.com/','Concept work and visual trends. Useful for style, not for structure.','inspo'],
+  ['Behance','https://www.behance.net/','Full case studies rather than single shots — better for process.','inspo'],
+  ['Lapa Ninja','https://www.lapa.ninja/','Real, live landing pages. This is the one to open before you design.','inspo'],
+  ['Land-book','https://land-book.com/','Another gallery of shipped sites, filterable by industry and style.','inspo'],
+  ['Pinterest','https://www.pinterest.com','Still the fastest way to build a mood board a client understands.','inspo'],
+
+  // ---- Colour
+  ['Coolors','https://coolors.co/','Hit space until a palette appears. Faster than theorising.','color'],
+  ['Huemint','https://huemint.com/','Generates palettes for a specific layout, not just five swatches.','color'],
+  ['Adobe Color','https://color.adobe.com','Build from harmony rules, and check contrast while you\'re there.','color'],
+  ['ColorZilla','https://www.colorzilla.com','Eyedropper extension for pulling exact values off any live page.','color'],
+
+  // ---- Productivity
+  ['Notion','https://www.notion.so/','Docs, client wikis and project tracking in one workspace.','ops'],
+  ['TopTracker','https://www.toptal.com/tracker','Free time tracking with screenshots — useful for hourly work.','ops'],
+  ['Wave','https://www.waveapps.com/','Invoicing and basic accounting, free for most freelancers.','ops'],
+  ['Bonsai','https://www.hellobonsai.com/','Proposals, contracts and invoices in one place. Paid, worth it at scale.','ops'],
+  ['Freelance Invoice Template','https://www.docusign.com/templates/freelancer-invoice','A plain, correct invoice template for when you just need to bill.','ops'],
+
+  // ---- Jobs
+  ['Upwork','https://upwork.com/','The biggest marketplace. Competitive, but the volume is real.','jobs'],
+  ['Fiverr','https://www.fiverr.com/','Productised, smaller jobs. Good for building a first portfolio.','jobs'],
+  ['Freelancer','https://www.freelancer.com/','Quieter than it was. Worth a profile as a secondary channel.','jobs'],
+  ['PeoplePerHour','https://www.peopleperhour.com/','Smaller and European-leaning — less crowded as a result.','jobs'],
+  ['Toptal','https://www.toptal.com/','Screened network for senior work. Hard to get into, better rates.','jobs'],
+  ['Flowremote','https://www.flowremote.io/','Job board specifically for Webflow designers and developers.','jobs'],
+  ['Project Pricing Calculator','https://www.cashyourflow.com/','Free tool for pricing a build instead of guessing at a number.','jobs'],
+
+  // ---- Learning
+  ['Nielsen Norman Group','https://www.nngroup.com/articles/','The most credible UX research on the internet. Read it before you argue.','learn'],
+  ['Prototypr','https://prototypr.io','Essays and tooling news from people building real products.','learn'],
+  ['Don\'t Make Me Think','https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515','Steve Krug. The shortest useful book on usability ever written.','learn'],
+  ['The Design of Everyday Things','https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654','Don Norman. Explains why bad doors and bad interfaces fail identically.','learn'],
+];
+
+const $ = s => document.querySelector(s);
+const host = u => { try { return new URL(u).hostname.replace(/^www\./,''); } catch { return ''; } };
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ARROW = '<svg class="row-go" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>';
+
+let filter = 'all', query = '';
+
+$('#m-total').textContent = R.length;
+$('#q').placeholder = `Search ${R.length} resources — try “icons”, “free”, “fonts”…`;
+
+// ---- chips
+const chips = $('#chips');
+const mkChip = (id, label, n) => {
+  const b = document.createElement('button');
+  b.className = 'chip'; b.type = 'button';
+  b.setAttribute('aria-pressed', String(filter === id));
+  b.dataset.id = id;
+  b.textContent = `${label} ${n}`;
+  b.addEventListener('click', () => { filter = id; render(); });
+  return b;
+};
+function buildChips(){
+  chips.innerHTML = '';
+  chips.appendChild(mkChip('all','Everything',R.length));
+  for (const [id,label] of CATS) chips.appendChild(mkChip(id,label,R.filter(r=>r[3]===id).length));
+}
+
+// ---- list
+function render(){
+  buildChips();
+  const q = query.trim().toLowerCase();
+  const hit = r => {
+    if (filter !== 'all' && r[3] !== filter) return false;
+    if (!q) return true;
+    const cat = (CATS.find(c=>c[0]===r[3])||[])[1] || '';
+    return (r[0]+' '+r[2]+' '+cat+' '+host(r[1])).toLowerCase().includes(q);
+  };
+  const shown = R.filter(hit);
+  $('#c-n').textContent = shown.length;
+
+  const list = $('#list');
+  if (!shown.length){
+    list.innerHTML = `<div class="empty"><b>Nothing matches “${esc(query)}”.</b>
+      Try a broader word — “free”, “font”, “icon”, “photo”.
+      <br><button type="button" id="reset">Clear the search</button></div>`;
+    $('#reset').addEventListener('click', () => { query=''; filter='all'; $('#q').value=''; render(); $('#q').focus(); });
+    return;
+  }
+
+  let html = '';
+  for (const [id,label,note] of CATS){
+    const items = shown.filter(r => r[3] === id);
+    if (!items.length) continue;
+    html += `<section class="group" id="${id}">
+      <div class="group-head"><h2>${label}</h2><span class="n">${items.length}</span></div>
+      ${(!q && filter==='all') ? `<p class="group-note">${note}</p>` : ''}
+      <div>`;
+    for (const r of items){
+      html += `<a class="row" href="${r[1]}" target="_blank" rel="noopener noreferrer">
+        <span class="row-name">${esc(r[0])}</span>
+        <span class="leader" aria-hidden="true"></span>
+        <span class="row-desc">${esc(r[2])}</span>
+        <span class="row-host">${host(r[1])}</span>
+        ${ARROW}
+      </a>`;
+    }
+    html += `</div></section>`;
+  }
+  list.innerHTML = html;
+}
+
+// ---- events
+$('#q').addEventListener('input', e => { query = e.target.value; render(); });
+$('#q').addEventListener('keydown', e => {
+  if (e.key === 'Escape'){ e.target.value=''; query=''; render(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && document.activeElement !== $('#q')){ e.preventDefault(); $('#q').focus(); }
+});
+
+// deep links: #icons, #jobs …
+const fromHash = () => {
+  const h = location.hash.replace('#','');
+  if (CATS.some(c => c[0] === h)) filter = h;
+};
+fromHash();
+window.addEventListener('hashchange', () => { fromHash(); render(); });
+
+render();
+</script>
+</body>
+</html>
